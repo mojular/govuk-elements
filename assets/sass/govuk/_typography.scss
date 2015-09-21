@@ -1,0 +1,99 @@
+@import 'govuk/-essentials';
+
+body {
+  @include font(nta, $em-base);
+  @include font-smoothing;
+}
+
+// Links
+
+a {
+  &:link {
+    color: $link-colour;
+  }
+
+  &:hover {
+    color: $link-hover-colour;
+  }
+
+  &:visited {
+    color: $link-visited-colour;
+  }
+
+  &:active {
+    color: $orange;
+  }
+
+  &:focus {
+    background: $yellow;
+    outline: 2px solid $yellow;
+  }
+}
+
+// Headings
+
+h1, h2, h3, h4 {
+  line-height: 1.04;
+}
+
+h1,
+.heading-xlarge {
+  font-size: em(48);
+  margin: 1em 0;
+}
+
+h2,
+.heading-large {
+  font-size: em(36);
+  margin-top: em(36/1.2);
+  margin-bottom: em(36/3.4);
+}
+
+h3,
+.heading-medium {
+  font-size: em(24);
+  margin-top: em(24*1.5);
+  margin-bottom: em(24/1.5);
+}
+
+h4,
+.heading-small {
+  font-size: em(19);
+  margin-top: em(19*1.5);
+  margin-bottom: em(19/1.5);
+}
+
+h5,
+.heading-xsmall {
+  font-size: 1em;
+  color: $grey-1;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+// Paragraphs
+
+p {
+  margin: 0 0 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro-paragraph,
+.lede {
+  font-size: em(24);
+}
+
+.font-xsmall,
+small {
+  font-size: em(16);
+}
+
+// Lists
+
+ul,
+ol {
+  padding-left: 1em;
+}

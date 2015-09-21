@@ -1,0 +1,19 @@
+@import 'govuk/-essentials';
+
+body {
+  background: $grey-3;
+}
+
+.main-content {
+  background: $white;
+}
+
+#content {
+  overflow: hidden;
+}
+
+hr {
+  margin: 2em 0;
+  border: solid $grey-2;
+  border-width: 2px 0 0;
+}

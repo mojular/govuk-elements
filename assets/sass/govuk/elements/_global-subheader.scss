@@ -1,0 +1,18 @@
+@import 'govuk/-essentials';
+
+.global-header + .global-subheader {
+  padding: $container-v-padding $container-h-padding;
+  background-color: $white;
+}
+
+.subheader-item {
+  padding: $container-v-padding 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+  line-height: 1;
+
+  .phase-tag {
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
+}

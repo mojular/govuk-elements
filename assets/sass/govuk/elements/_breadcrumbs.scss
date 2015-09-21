@@ -1,0 +1,31 @@
+@import 'govuk/-essentials';
+
+.breadcrumbs {
+  ol,
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+
+    &:before {
+      content: '›';
+      font-size: 1.3em;
+      margin-left: $container-h-padding/2;
+      margin-right: $container-h-padding/2;
+      display: inline-block;
+      color: $grey-2;
+    }
+
+    &:first-child:before {
+      content: none;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}

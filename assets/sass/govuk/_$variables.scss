@@ -1,0 +1,17 @@
+$fonts: (
+  nta: 'nta, Arial, sans-serif',
+  nta-tabular: 'ntatabularnumbers, nta, Arial, sans-serif',
+  print: sans-serif,
+  regular: '"Helvetica Neue", Arial, sans-serif'
+);
+
+$container-v-padding: 10px;
+$container-h-padding: 15px;
+
+// Set this variable manually when using vanilla Sass
+// Use Asset Pipeline helper otherwise
+// When set this variable should be declared before importing this helper
+$assets-prefix: null !default;
+
+// Default value for em-based measurements
+$em-base: 19px;

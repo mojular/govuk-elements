@@ -1,0 +1,15 @@
+$images-dir: '' !default;
+
+@function img-url($path) {
+  $full-path: $path;
+
+  @if $images-dir {
+    $full-path: $images-dir + $full-path;
+  }
+
+  @if function_exists(image-url) {
+    @return image-url($full-path);
+  }
+
+  @return url($full-path);
+}

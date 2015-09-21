@@ -1,0 +1,23 @@
+@import 'govuk/-essentials';
+
+table {
+  width: 100%;
+  font-size: em(16);
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    padding: .75em 1.25em .6em 0;
+    border-bottom: 1px solid $grey-2;
+  }
+
+  .numeric {
+    text-align: right;
+  }
+}

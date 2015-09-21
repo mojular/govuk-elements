@@ -1,0 +1,67 @@
+@import 'govuk/-essentials';
+
+.global-footer {
+  font-size: em(16);
+  color: #555;
+  border-top: $container-v-padding solid $govuk-blue;
+  background: $grey-3;
+  padding: ($container-v-padding * 2) 50px;
+
+  a {
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+      color: #444;
+    }
+  }
+
+  .support-links,
+  .copyright {
+    display: inline-block;
+  }
+
+  .support-links {
+    width: 80%;
+
+    ul {
+      list-style: none;
+      margin: 0 0 1em;
+      padding: 0;
+    }
+
+    li {
+      margin-right: $container-h-padding;
+      display: inline-block;
+    }
+  }
+
+  .open-government-licence {
+    padding-left: 50px;
+  }
+
+  .ogl-logo {
+    $_size: 41px 17px;
+
+    @include hide-text;
+    @include size($_size);
+    float: left;
+    background: img-url('open-government-licence_2x.png') no-repeat;
+    background-size: $_size;
+    margin-left: -50px;
+  }
+
+  .copyright {
+    text-align: right;
+    width: 18%;
+
+    a {
+      display: inline-block;
+      padding-top: 120px;
+      width: 145px;
+      background: img-url('govuk-crest.png') no-repeat 50% 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+}

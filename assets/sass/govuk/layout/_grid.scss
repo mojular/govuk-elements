@@ -1,0 +1,55 @@
+@import 'govuk/-essentials';
+
+$grid-settings: () !default;
+$susy: (
+  container: 960px,
+  columns: 12,
+  gutters: 30px/80px,
+  gutter-position: inside-static,
+  column-width: 80px
+);
+
+$susy: map-merge($susy, $grid-settings);
+
+.container {
+  @include container;
+}
+
+.grid-row {
+  @include clearfix;
+  margin-left: -(gutters());
+  margin-right: -(gutters());
+}
+
+@include breakpoint(min-width 641px) {
+  .column-half {
+    @include span(6);
+  }
+  .column-third {
+    @include span(4);
+  }
+
+  .column-two-thirds {
+    @include span(8);
+  }
+
+  .column-quarter {
+    @include span(3);
+  }
+
+}
+
+@include breakpoint(max-width 640px) {
+  .grid-row {
+    @include container;
+  }
+
+  [class|="column"] {
+    margin-top: gutters();
+
+    &:first-child,
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

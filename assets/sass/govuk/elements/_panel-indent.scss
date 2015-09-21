@@ -1,0 +1,13 @@
+@import 'govuk/-essentials';
+
+.panel-indent {
+  border-left: 4px solid $grey-2;
+  padding: 10px 15px;
+  margin: em(30) em(15) em(30) 0;
+  clear: left;
+
+  p:only-child,
+  p:last-child {
+    margin: 0;
+  }
+}
