@@ -15,3 +15,9 @@ $assets-prefix: null !default;
 
 // Default value for em-based measurements
 $em-base: 19px;
+
+$breakpoints: (
+  phone: 320px,
+  tablet: 640px,
+  desktop: 1024px
+);

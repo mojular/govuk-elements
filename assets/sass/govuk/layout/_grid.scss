@@ -21,7 +21,7 @@ $susy: map-merge($susy, $grid-settings);
   margin-right: -(gutters());
 }
 
-@include breakpoint(min-width 641px) {
+@include media('>tablet') {
   .column-half {
     @include span(6);
   }
@@ -36,10 +36,9 @@ $susy: map-merge($susy, $grid-settings);
   .column-quarter {
     @include span(3);
   }
-
 }
 
-@include breakpoint(max-width 640px) {
+@include media('<tablet') {
   .grid-row {
     @include container;
   }
