@@ -8,6 +8,7 @@
   border: 0;
   font-size: 1em;
   border-bottom: 2px solid darken($button-colour, 12);
+  cursor: pointer;
 
   &:hover:not([disabled]) {
     background-color: darken($button-colour, 5);
