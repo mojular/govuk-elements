@@ -1,10 +1,5 @@
 @import 'govuk/-essentials';
 
-.u-vh {
-  @include visually-hidden;
-}
-
-
 .u-hide-text {
   @include hide-text;
 }
@@ -13,9 +8,13 @@
   transition: opacity 300ms ease-out;
 }
 
-.u-hidden,
+.u-vh,
+.u-hidden {
+  @include visually-hidden;
+}
+
 [data-control-value]:not(.u-expanded) {
-  @extend .u-vh;
+  @include visually-hidden;
 }
 
 .u-expanded.u-expanded {
