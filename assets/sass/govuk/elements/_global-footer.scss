@@ -46,8 +46,8 @@
     @include hide-text;
     @include size($_size);
     float: left;
-    background: img-url('open-government-licence_2x.png') no-repeat;
-    background-size: $_size;
+    background: img-url('open-government-licence.png') no-repeat 0 0;
+    background: img-url('open-government-licence-2x.png') no-repeat 0 0/$_size;
     margin-left: -50px;
   }
 
