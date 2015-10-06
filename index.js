@@ -8,7 +8,7 @@ function prefixPaths(paths) {
 }
 
 module.exports = {
-  getPaths: function() {
+  getPaths: function(key) {
     var paths = packageMeta.paths;
     if(paths) {
       Object.keys(paths).forEach(function(k) {
@@ -17,6 +17,10 @@ module.exports = {
     } else {
       paths = [];
     }
-    return paths;
+    if(!paths[key]) {
+      throw new Error('`' + key + '` can’t be found in paths');
+    }
+
+    return paths[key];
   }
 };
