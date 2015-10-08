@@ -9,7 +9,8 @@
 }
 
 .u-vh,
-.u-hidden {
+.u-hidden,
+.sr-only {
   @include visually-hidden;
 }
 
