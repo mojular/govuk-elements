@@ -15,13 +15,13 @@ $susy: map-merge($susy, $grid-settings);
   @include container;
 }
 
-.grid-row {
-  @include clearfix;
-  margin-left: -(gutters());
-  margin-right: -(gutters());
-}
-
 @include media('>tablet') {
+  .grid-row {
+    @include clearfix;
+    margin-left: -(gutters());
+    margin-right: -(gutters());
+  }
+
   .column-half {
     @include span(6);
   }
