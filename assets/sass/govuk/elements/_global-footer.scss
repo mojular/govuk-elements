@@ -65,3 +65,37 @@
     }
   }
 }
+
+@media print {
+  .global-footer {
+    margin-top: 2cm;
+    padding: 5mm 0 0;
+
+    .open-government-licence {
+      padding: 0;
+    }
+
+    .support-links {
+      display: block;
+      width: auto;
+
+      li {
+        display: block;
+      }
+    }
+
+    .copyright {
+      text-align: left;
+      width: auto;
+      display: block;
+      margin-top: 2mm;
+
+      a {
+        width: auto;
+        padding: 0;
+        background: none;
+        text-align: left;
+      }
+    }
+  }
+}

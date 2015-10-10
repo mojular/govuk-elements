@@ -16,4 +16,8 @@ body {
   @include flex(1);
   min-height: 450px;
   padding: $container-v-padding $container-h-padding 50px;
+
+  @media print {
+    padding: 0;
+  }
 }

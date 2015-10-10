@@ -3,6 +3,10 @@
 .global-header + .global-subheader {
   padding: $container-v-padding $container-h-padding;
   background-color: $white;
+
+  @media print {
+    padding: 0;
+  }
 }
 
 .subheader-item {

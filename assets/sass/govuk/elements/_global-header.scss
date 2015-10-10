@@ -41,11 +41,14 @@
     font-size: em($_logo-size);
     padding: 1px 0 3px em($_logo-size - 3);
     outline: 0;
-    color: white;
     background: img-url('crown-logo-white.png') no-repeat 0 2px;
     background: img-url('crown-logo-white-2x.png') no-repeat 0 2px/35px;
     background-size: 1.15em;
     border-bottom: 1px solid transparent;
+
+    img {
+      display: none;
+    }
 
     span {
       display: block;
@@ -91,3 +94,39 @@
     display: none;
   }
 }
+
+@media print {
+  .global-header {
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 2mm 0;
+    background: none;
+
+    a::after {
+      content: none !important;
+    }
+
+    .header-proposition {
+      text-align: right;
+      float: none;
+    }
+
+    .header-logo img {
+      float: left;
+      margin-left: -42px;
+      display: block;
+    }
+  }
+
+  .header-bar {
+    display: none;
+  }
+
+  .global-subheader {
+    .subheader-item {
+      padding: 4mm 0;
+      border: 0;
+    }
+  }
+}
+
