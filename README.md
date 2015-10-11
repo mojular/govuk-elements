@@ -43,7 +43,9 @@ be `push`ed as required.
 In `config/initializers/sass.rb`
 
 ```ruby
-Sass.load_paths << JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass']
+JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass'].each do |p|
+  Sass.load_paths << File.expand_path("node_modules/mojular-govuk-elements/#{p}")
+end
 ```
 
 Module’s import paths are defined in its `package.json` file. Import the into project’s `load_paths`.
