@@ -66,7 +66,7 @@ STATICFILES_DIRS = (
 In `config/initializers/assets.rb`:
 
 ```ruby
-Rails.application.config.assets.paths << Rails.root.join(bowerrc_dir, 'govuk-template', 'assets')
+Rails.application.config.assets.paths << Rails.root.join('node_modules', 'mojular-govuk-template', 'assets')
 ```
 
 ## Usage
