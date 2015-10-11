@@ -91,7 +91,7 @@ Or individual modules can be imported:
 @import 'govuk/elements/phase-banner';
 ```
 
-`$image-dir` is used to prefix all images referenced in elements. This should be path to project’s built assets directory.
+`$image-dir` is used to prefix all images referenced in elements. This should be path to project’s built assets directory and should be included before any other imports.
 
 ```scss
 $images-dir: '/static/images/';
