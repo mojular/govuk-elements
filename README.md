@@ -14,6 +14,8 @@ To use in your project with Gulp add the following to your `gulpfile.js`:
 
 ### Sass
 
+**Gulp**
+
 ```js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -35,6 +37,17 @@ These then can be passed to Sass compiler via `includePaths` and allows to impor
 directly by file names as if they were local. Each module which includes Sass files has
 `getPaths()` method which gets the list of paths to Sass files. Additional modules can
 be `push`ed as required.
+
+**Rails**
+
+In `config/initializers/sass.rb`
+
+```ruby
+Sass.load_paths << JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass']
+```
+
+Module’s import paths are defined in its `package.json` file. Import the into project’s `load_paths`.
+
 
 ### Images
 
@@ -68,12 +81,6 @@ In `config/initializers/assets.rb`:
 ```ruby
 Rails.application.config.assets.paths << Rails.root.join('node_modules', 'mojular-govuk-elements', 'assets', 'images')
 Rails.application.config.assets.precompile += %w(*.js *.png *.jpg *.ico)
-```
-
-In `config/initializers/sass.rb`
-
-```ruby
-Sass.load_paths << JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass']
 ```
 
 
