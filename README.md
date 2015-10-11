@@ -12,6 +12,8 @@ npm install https://github.com/mojular/govuk-elements/tarball/master --save
 
 To use in your project with Gulp add the following to your `gulpfile.js`:
 
+### Sass
+
 ```js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -33,6 +35,39 @@ These then can be passed to Sass compiler via `includePaths` and allows to impor
 directly by file names as if they were local. Each module which includes Sass files has
 `getPaths()` method which gets the list of paths to Sass files. Additional modules can
 be `push`ed as required.
+
+### Images
+
+One option is to copy this module’s assets into your local assets folder via Gulp task:
+
+```js
+gulp.task('images', function() {
+  return gulp.src('node_modules/mojular-govuk-elements/assets/images/*')
+    .pipe(gulp.dest('assets/images/'));
+});
+```
+
+Alternatively add their location to your projects assets settings.
+
+**Django**
+
+In project settings file:
+
+```py
+project_root = abspath(root('..'))
+STATICFILES_DIRS = (
+    root('assets'),
+    abspath(root(project_root, 'node_modules', 'govuk-template', 'assets'))
+)
+```
+
+**Rails**
+
+In `config/initializers/assets.rb`:
+
+```ruby
+Rails.application.config.assets.paths << Rails.root.join(bowerrc_dir, 'govuk-template', 'assets')
+```
 
 ## Usage
 
