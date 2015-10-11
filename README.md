@@ -70,6 +70,13 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules', 'mojula
 Rails.application.config.assets.precompile += %w(*.js *.png *.jpg *.ico)
 ```
 
+In `config/initializers/sass.rb`
+
+```ruby
+Sass.load_paths << JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass']
+```
+
+
 ## Usage
 
 The whole module can be imported in your Sass file:
