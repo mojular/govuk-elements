@@ -56,6 +56,6 @@ Or individual modules can be imported:
 @import 'govuk/elements/phase-banner';
 ```
 
-See the list of modules in [`assets/sass/govuk`](/mojular/govuk-elements/tree/master/assets/sass/govuk/elements).
+See the list of modules in [`assets/sass/govuk`](https://github.com/mojular/govuk-elements/tree/master/assets/sass/govuk).
 
 HTML Examples can be found on [GOV.UK generated styleguide](http://ministryofjustice.github.io/bower-playground/GOV.UK/).
