@@ -91,6 +91,12 @@ Or individual modules can be imported:
 @import 'govuk/elements/phase-banner';
 ```
 
+`$image-dir` is used to prefix all images referenced in elements. This should be path to project’s built assets directory.
+
+```scss
+$images-dir: '/static/images/';
+```
+
 See the list of modules in [`assets/sass/govuk`](https://github.com/mojular/govuk-elements/tree/master/assets/sass/govuk).
 
 HTML Examples can be found on [GOV.UK generated styleguide](http://ministryofjustice.github.io/bower-playground/GOV.UK/).
