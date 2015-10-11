@@ -1,0 +1,111 @@
+@import 'govuk/-essentials';
+
+.form-control {
+  border: 1px solid $grey-2;
+  padding: em(4);
+  font-size: em(19);
+  border-radius: 0;
+  width: 50%;
+  min-width: 5em;
+
+  &:focus {
+    outline: 3px solid $yellow;
+  }
+}
+
+.form-group {
+  float: left;
+  width: 100%;
+  margin-bottom: em(8);
+
+  + .form-group {
+    margin-top: em(22);
+  }
+
+  .form-hint {
+    color: $grey-1;
+    margin: em(8) 0 em(5)
+  }
+}
+
+.form-label {
+  display: block;
+  margin-bottom: em(5);
+}
+
+%checkbox-radio-left-align {
+  position: relative;
+  margin: 0 .6em 0 -1.8em;
+  top: -.1em;
+}
+
+.block-label {
+  float: left;
+  clear: left;
+  cursor: pointer;
+  padding: em(13) em(25) em(13) em(43);
+  margin: em(5) em(10) em(5) 0;
+  background: $grey-3;
+  border: 1px solid $grey-3;
+
+  .inline & {
+    display: inline-block;
+    clear: none;
+  }
+
+  &:hover,
+  &:focus,
+  &.s-focused {
+    border-color: $grey-1;
+  }
+
+  &:focus,
+  &.s-focused {
+    outline: 3px solid $yellow;
+    background: white;
+  }
+
+  &.s-selected {
+    border-color: $black;
+    background: white;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    @extend %checkbox-radio-left-align;
+  }
+}
+
+.form-block {
+  float: left;
+  width: 100%;
+  clear: left;
+  margin: .5em 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  > fieldset {
+    margin: 0 0 em(5);
+    display: block;
+  }
+
+  .form-label-bold {
+    font-weight: bold;
+    font-size: em(24);
+  }
+}
+
+.form-checkbox {
+  display: block;
+  padding-left: 1em;
+  margin: em(15) 0;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    @extend %checkbox-radio-left-align;
+  }
+}

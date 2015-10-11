@@ -1,0 +1,24 @@
+@import 'govuk/-essentials';
+
+.u-hide-text {
+  @include hide-text;
+}
+
+[data-controlled-by] {
+  transition: opacity 300ms ease-out;
+}
+
+.u-vh,
+.u-hidden,
+.sr-only {
+  @include visually-hidden;
+}
+
+[data-control-value]:not(.u-expanded) {
+  @include visually-hidden;
+}
+
+.u-expanded.u-expanded {
+  visibility: visible;
+  opacity: 1;
+}

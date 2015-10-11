@@ -1,0 +1,21 @@
+@import 'govuk/-essentials';
+
+body {
+  background: white;
+}
+
+hr {
+  margin: 2em 0;
+  border: solid $grey-2;
+  border-width: 2px 0 0;
+}
+
+@media print {
+  a {
+    color: black;
+
+    &:after {
+      content: ' (' attr(href) ')';
+    }
+  }
+}

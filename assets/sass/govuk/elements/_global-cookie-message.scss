@@ -1,0 +1,9 @@
+#global-cookie-message {
+  background: $light-blue-25;
+  padding: 10px;
+  font-size: em(16);
+
+  .js-enabled & {
+    display: none;
+  }
+}

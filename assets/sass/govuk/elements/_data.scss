@@ -1,0 +1,23 @@
+@import 'govuk/-essentials';
+
+.data {
+  padding: em(10) 0;
+}
+
+.data-title {
+  font-size: em(80);
+  line-height: .8;
+  font-weight: bold;
+}
+
+.data-subtitle {
+  margin-top: em(4);
+  font-size: em(16);
+  font-weight: bold;
+}
+
+.data-smaller {
+  .data-title {
+    font-size: em(48);
+  }
+}

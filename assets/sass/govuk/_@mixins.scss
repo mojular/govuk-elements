@@ -1,0 +1,45 @@
+@mixin font($font-family: null, $size: null, $line-height: null) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $font-family {
+    @if map-has-key($fonts, $font-family) {
+      font-family: unquote(map-get($fonts, $font-family));
+    } @else {
+      @warn "'#{$font-family}' is not specified in $fonts map."
+    }
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Hide only visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin visually-hidden {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden !important;
+  position: absolute !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 1px;
+  height: 1px;
+}
+
+// Hide text inside element
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

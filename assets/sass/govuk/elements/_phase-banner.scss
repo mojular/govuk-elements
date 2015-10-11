@@ -1,0 +1,41 @@
+@import 'govuk/-essentials';
+
+.phase-tag {
+  padding: 3px 5px;
+  display: inline-block;
+  color: $white;
+  font-weight: bold;
+  background: $grey-1;
+  text-transform: uppercase;
+
+  &.phase-tag-alpha {
+    background: $alpha-colour;
+
+    + .phase-banner-message {
+      padding-left: 4.5em;
+    }
+  }
+
+  &.phase-tag-beta {
+    background: $beta-colour;
+
+    + .phase-banner-message {
+      padding-left: 4em;
+    }
+  }
+}
+
+.phase-banner {
+  .phase-tag {
+    float: left;
+    margin-top: -4px;
+    margin-bottom: -4px;
+
+    @media print {
+      border: 1mm solid;
+      background: white;
+      color: black;
+      margin: -2mm 3mm 0 0;
+    }
+  }
+}

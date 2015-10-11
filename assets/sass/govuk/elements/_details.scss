@@ -1,0 +1,23 @@
+@import 'govuk/-essentials';
+
+details {
+  summary {
+    @extend a;
+    color: $link-colour;
+    display: inline-block;
+    padding: 0 5px;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:focus {
+      background: none;
+      color: $link-colour;
+      text-decoration: none;
+    }
+  }
+
+  .panel-indent {
+    margin-left: 9px;
+    margin-top: 0;
+  }
+}

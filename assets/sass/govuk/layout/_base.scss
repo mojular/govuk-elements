@@ -1,0 +1,23 @@
+@import 'govuk/-essentials';
+
+html {
+  height: 100%;
+}
+
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.main-content {
+  @include flex(1);
+  min-height: 450px;
+  padding: $container-v-padding $container-h-padding 50px;
+
+  @media print {
+    padding: 0;
+  }
+}

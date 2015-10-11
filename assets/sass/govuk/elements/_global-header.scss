@@ -1,0 +1,132 @@
+@import 'govuk/-essentials';
+
+.global-header {
+  $_logo-size: 30px;
+  $_logo-offset: 3px;
+
+  background: $black;
+  color: $white;
+  line-height: $_logo-size;
+  padding: $container-v-padding $container-h-padding;
+
+  .skip-link a {
+    display: inline-block;
+    margin-bottom: $container-v-padding / 2;
+    font-size: .9em;
+    line-height: 1;
+    position: absolute;
+    left: -999em;
+    overflow: hidden;
+    text-decoration: underline;
+    color: $black;
+
+    &:focus {
+      position: static;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .header-branding {
+    @include span(33.33% no-gutters);
+  }
+
+  .header-logo {
+    transition: border 200ms;
+    display: inline-block;
+    font-weight: bold;
+    font-size: em($_logo-size);
+    padding: 1px 0 3px em($_logo-size - 3);
+    outline: 0;
+    background: img-url('crown-logo-white.png') no-repeat 0 2px;
+    background: img-url('crown-logo-white-2x.png') no-repeat 0 2px/35px;
+    background-size: 1.15em;
+    border-bottom: 1px solid transparent;
+
+    img {
+      display: none;
+    }
+
+    span {
+      display: block;
+      position: relative;
+      top: $_logo-offset;
+      line-height: $_logo-size - $_logo-offset;
+    }
+  }
+
+  .header-logo,
+  .proposition-name {
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .header-proposition {
+    float: left;
+  }
+
+  .proposition-name {
+    position: relative;
+    font-size: em(24);
+    font-weight: 600;
+    top: 4px;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .container {
+    @include clearfix;
+    position: relative;
+  }
+
+  .header-bar {
+    @include position(absolute, null 0 (-$container-v-padding * 2) 0);
+    background: $govuk-blue;
+    height: $container-v-padding;
+  }
+
+  .header-menu-toggle {
+    display: none;
+  }
+}
+
+@media print {
+  .global-header {
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 2mm 0;
+    background: none;
+
+    a::after {
+      content: none !important;
+    }
+
+    .header-proposition {
+      text-align: right;
+      float: none;
+    }
+
+    .header-logo img {
+      float: left;
+      margin-left: -42px;
+      display: block;
+    }
+  }
+
+  .header-bar {
+    display: none;
+  }
+
+  .global-subheader {
+    .subheader-item {
+      padding: 4mm 0;
+      border: 0;
+    }
+  }
+}
+
