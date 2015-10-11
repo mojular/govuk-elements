@@ -1,6 +1,6 @@
 {
   "name": "mojular-govuk-elements",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mojular/govuk.git"
+    "url": "git+https://github.com/mojular/govuk-elements.git"
   },
   "author": {
     "name": "Tyom Semonov",
@@ -17,9 +17,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mojular/govuk/issues"
+    "url": "https://github.com/mojular/govuk-elements/issues"
   },
-  "homepage": "https://github.com/mojular/govuk#readme",
+  "homepage": "https://github.com/mojular/govuk-elements#readme",
   "dependencies": {
     "bourbon": "^4.2.5",
     "include-media": "^1.4.1",
