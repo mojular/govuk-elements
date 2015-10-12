@@ -1,20 +1,26 @@
 @import 'govuk/-essentials';
 
-html {
+html,
+body {
   height: 100%;
 }
 
 body {
   @include display(flex);
   @include flex-direction(column);
-  min-height: 100%;
   padding: 0;
   margin: 0;
+
+  > header,
+  > footer {
+    @include flex(none);
+  }
 }
 
 .main-content {
-  @include flex(1);
+  @include flex(1 0 auto);
   min-height: 450px;
+  display: block;
   padding: $container-v-padding $container-h-padding 50px;
 
   @media print {
