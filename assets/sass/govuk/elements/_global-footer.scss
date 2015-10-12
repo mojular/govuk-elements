@@ -8,7 +8,7 @@
   padding: ($container-v-padding * 4) $container-h-padding;
 
   a {
-    color: inherit;
+    color: #444;
     display: inline-block;
 
     &:hover {
@@ -19,6 +19,8 @@
   .support-links,
   .copyright {
     display: inline-block;
+    zoom: 1;
+    *display: inline; // IE7
   }
 
   .support-links {
@@ -33,6 +35,7 @@
     li {
       margin-right: $container-h-padding;
       display: inline-block;
+      *display: inline; // IE7;
     }
 
     @include media('<tablet') {
