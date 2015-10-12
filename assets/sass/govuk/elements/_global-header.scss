@@ -26,7 +26,7 @@
   }
 
   a {
-    color: inherit;
+    color: $white;
     text-decoration: none;
   }
 
@@ -38,7 +38,7 @@
     transition: border 200ms;
     display: inline-block;
     font-weight: bold;
-    font-size: em($_logo-size);
+    font-size: $_logo-size;
     padding: 1px 0 3px em($_logo-size - 3);
     outline: 0;
     background: img-url('crown-logo-white.png') no-repeat 0 2px;
@@ -59,7 +59,7 @@
   }
 
   .header-logo,
-  .proposition-name {
+  a.proposition-name {
     &:hover,
     &:focus {
       border-bottom: 1px solid white;

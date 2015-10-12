@@ -3,6 +3,10 @@
 body {
   @include font(nta, $em-base);
   @include font-smoothing;
+
+  @include media('<tablet') {
+    @include font(nta, $em-base - 3);
+  }
 }
 
 // Links

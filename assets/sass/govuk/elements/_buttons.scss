@@ -9,6 +9,10 @@
   font-size: 1em;
   border-bottom: 2px solid darken($button-colour, 12);
   cursor: pointer;
+  // IE7
+  *border-bottom: 0;
+  width: auto;
+  overflow: visible;
 
   &:hover:not([disabled]) {
     background-color: darken($button-colour, 5);
