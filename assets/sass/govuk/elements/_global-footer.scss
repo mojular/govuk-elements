@@ -34,6 +34,10 @@
       margin-right: $container-h-padding;
       display: inline-block;
     }
+
+    @include media('<tablet') {
+      width: auto;
+    }
   }
 
   .open-government-licence {
@@ -62,6 +66,14 @@
       background: img-url('govuk-crest.png') no-repeat 50% 10px;
       text-align: center;
       text-decoration: none;
+    }
+
+    @include media('<tablet') {
+      width: auto;
+      display: block;
+      margin: auto;
+      text-align: center;
+      margin-top: 40px;
     }
   }
 }
