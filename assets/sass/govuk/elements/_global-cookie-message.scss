@@ -3,6 +3,10 @@
   padding: 10px;
   font-size: em(16);
 
+  p {
+    margin: 0;
+  }
+
   .js-enabled & {
     display: none;
   }
