@@ -1,7 +1,16 @@
 @import 'govuk/-essentials';
 
 body {
-  background: white;
+  background: $grey-3;
+
+  .main-content,
+  > header {
+    background: white;
+  }
+
+  @media print {
+    background: white;
+  }
 }
 
 hr {
