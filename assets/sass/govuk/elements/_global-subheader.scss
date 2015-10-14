@@ -1,7 +1,7 @@
 @import 'govuk/-essentials';
 
 .global-header + .global-subheader {
-  padding: $container-v-padding $container-h-padding;
+  padding: $container-v-padding $container-h-padding 0;
   background-color: $white;
 
   @media print {
