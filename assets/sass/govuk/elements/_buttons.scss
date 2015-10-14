@@ -4,9 +4,8 @@
   position: relative;
   background: $button-colour;
   color: white;
-  padding: em(10) em(15);
+  padding: em(8) em(15) em(5);
   border: 0;
-  font-size: 1em;
   border-bottom: 2px solid darken($button-colour, 12);
   cursor: pointer;
   // IE7
@@ -16,6 +15,14 @@
 
   &:hover:not([disabled]) {
     background-color: darken($button-colour, 5);
+  }
+
+  &:link,
+  &:visited {
+    color: white;
+    text-decoration: none;
+    line-height: 1;
+    background: $button-colour;
   }
 
   &:active {

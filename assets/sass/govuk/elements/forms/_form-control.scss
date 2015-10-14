@@ -1,0 +1,25 @@
+@import 'govuk/-essentials';
+
+.form-control {
+  box-sizing: border-box;
+  border: 1px solid $grey-2;
+  padding: em(8) em(7) em(5);
+  border-radius: 0;
+  width: 50%;
+  min-width: 5em;
+  vertical-align: middle;
+
+  &:focus {
+    outline: 3px solid $yellow;
+  }
+}
+
+textarea.form-control {
+  min-height: 100px;
+}
+
+select.form-control {
+  background: $white;
+  width: auto;
+  height: 2.15em;
+}

@@ -1,0 +1,25 @@
+@import 'govuk/-essentials';
+
+%checkbox-radio-left-align {
+  position: relative;
+  margin: 0 .6em 0 -1.8em;
+  top: -.1em;
+}
+
+.form-checkbox {
+  display: block;
+  padding-left: 1em;
+  margin: em(15) 0;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    @extend %checkbox-radio-left-align;
+  }
+}
+
+.block-label {
+  input[type="radio"],
+  input[type="checkbox"] {
+    @extend %checkbox-radio-left-align;
+  }
+}

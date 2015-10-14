@@ -1,0 +1,16 @@
+@import 'govuk/-essentials';
+
+.form-group {
+  float: left;
+  width: 100%;
+  margin-bottom: em(8);
+
+  + .form-group {
+    margin-top: em(22);
+  }
+
+  .form-hint {
+    color: $grey-1;
+    margin: em(8) 0 em(5)
+  }
+}
