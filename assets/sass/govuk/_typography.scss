@@ -101,3 +101,16 @@ ul,
 ol {
   padding-left: 1em;
 }
+
+// Form elements
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+
+  &:focus {
+    outline: 3px solid $yellow;
+  }
+}

@@ -1,0 +1,38 @@
+@import 'govuk/-essentials';
+
+.form-label {
+  display: block;
+  margin-bottom: em(5);
+}
+
+.block-label {
+  float: left;
+  clear: left;
+  cursor: pointer;
+  padding: em(13) em(25) em(13) em(43);
+  margin: em(5) em(10) em(5) 0;
+  background: $grey-3;
+  border: 1px solid $grey-3;
+
+  .inline & {
+    display: inline-block;
+    clear: none;
+  }
+
+  &:hover,
+  &:focus,
+  &.s-focused {
+    border-color: $grey-1;
+  }
+
+  &:focus,
+  &.s-focused {
+    outline: 3px solid $yellow;
+    background: white;
+  }
+
+  &.s-selected {
+    border-color: $black;
+    background: white;
+  }
+}
