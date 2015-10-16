@@ -1,14 +1,17 @@
 @import 'govuk/-essentials';
 
 .button {
+  display: inline-block;
   position: relative;
   background: $button-colour;
   color: white;
   padding: em(8) em(15) em(5);
-  border: 0;
-  border-bottom: 2px solid darken($button-colour, 12);
+  border: solid darken($button-colour, 12);
+  border-width: 0 0 2px 0;
   cursor: pointer;
   // IE7
+  *font-size: 1em;
+  *padding-top: em(5);
   *border-bottom: 0;
   width: auto;
   overflow: visible;
@@ -21,7 +24,6 @@
   &:visited {
     color: white;
     text-decoration: none;
-    line-height: 1;
     background: $button-colour;
   }
 
@@ -34,11 +36,6 @@
     outline: 3px solid $yellow;
   }
 
-  + button,
-  + input {
-    margin-left: .5em;
-  }
-
   &[disabled] {
     opacity: .5;
     cursor: default;
@@ -48,6 +45,17 @@
       border-color: inherit;
       top: 0;
     }
+  }
+
+  + button,
+  + input {
+    margin-left: .5em;
+  }
+
+  .button + &,
+  .form-control + & {
+    vertical-align: top;
+    *margin-left: .2em;
   }
 }
 
