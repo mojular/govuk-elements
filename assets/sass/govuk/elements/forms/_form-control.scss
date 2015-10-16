@@ -7,7 +7,9 @@
   border-radius: 0;
   width: 50%;
   min-width: 5em;
-  vertical-align: middle;
+  // IE7
+  *padding-top: em(8);
+  font-size: 1em;
 
   &:focus {
     outline: 3px solid $yellow;
