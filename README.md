@@ -88,6 +88,8 @@ Rails.application.config.assets.precompile += %w(*.js *.png *.jpg *.ico)
 
 ## Usage
 
+See [examples](https://github.com/mojular/examples) of using GOV.UK Elements with different frameworks.
+
 The whole module can be imported in your Sass file:
 
 ```scss
