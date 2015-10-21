@@ -32,6 +32,7 @@
 
   .header-branding {
     @include span(33.33% no-gutters);
+    min-width: 11em;
   }
 
   .header-logo {
