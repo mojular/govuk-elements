@@ -23,6 +23,7 @@
   "dependencies": {
     "bourbon": "^4.2.5",
     "include-media": "^1.4.1",
+    "mojular": "mojular/mojular",
     "susy": "^2.2.6"
   },
   "paths": {

@@ -22,7 +22,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
 var importPaths = [];
-importPaths.push(require('mojular-govuk-elements').getPaths('sass'));
+importPaths.push(require('mojular-govuk-elements').sassPaths);
 
 gulp.task('sass', function() {
   var result = gulp.src('path/to/your/local/styles/**/*.scss')
@@ -34,9 +34,8 @@ gulp.task('sass', function() {
 
 Each Mojular module containing Sass files exposes its paths in `package.json` file.
 These then can be passed to Sass compiler via `includePaths` and allows to import them
-directly by file names as if they were local. Each module which includes Sass files has
-`getPaths()` method which gets the list of paths to Sass files. Additional modules can
-be `push`ed as required.
+directly by file names as if they were local. Each module should have a property `sassPaths`
+that collects Sass paths defined in its `package.json`.
 
 **Rails**
 
