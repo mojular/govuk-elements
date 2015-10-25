@@ -2,13 +2,12 @@
 
 %checkbox-radio-left-align {
   position: relative;
-  margin: 0 .6em 0 -1.4em;
-  top: -.08em;
+  margin: 0 .6em 0 -1.35em;
 }
 
 .form-checkbox {
   display: block;
-  padding-left: 1.4em;
+  padding-left: 1.35em;
   margin: em(15) 0;
 
   input[type="radio"],
@@ -21,5 +20,9 @@
   input[type="radio"],
   input[type="checkbox"] {
     @extend %checkbox-radio-left-align;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
