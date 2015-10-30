@@ -22,7 +22,8 @@ $susy: map-merge($susy, $grid-settings);
     margin-right: -(gutters());
   }
 
-  .column-half {
+  .column-half,
+  .column-two-quarters {
     @include span(6);
   }
   .column-third {
@@ -35,6 +36,10 @@ $susy: map-merge($susy, $grid-settings);
 
   .column-quarter {
     @include span(3);
+  }
+
+  .column-three-quarters {
+    @include span(9);
   }
 }
 
