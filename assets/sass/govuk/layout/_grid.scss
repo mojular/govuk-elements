@@ -41,6 +41,10 @@ $susy: map-merge($susy, $grid-settings);
   .column-three-quarters {
     @include span(9);
   }
+
+  .column-full {
+    @include span(12);
+  }
 }
 
 @include media('<tablet') {
