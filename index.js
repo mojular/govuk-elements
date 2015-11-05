@@ -1,3 +1,5 @@
+'use strict';
+
 var mojular = require('mojular');
 
 module.exports = {
