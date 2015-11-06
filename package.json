@@ -31,7 +31,7 @@
       "node_modules/bourbon/app/assets/stylesheets/",
       "node_modules/include-media/dist",
       "node_modules/susy/sass",
-      "assets/sass"
+      "sass"
     ]
   }
 }
