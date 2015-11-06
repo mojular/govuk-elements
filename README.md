@@ -21,13 +21,14 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-var importPaths = [];
-importPaths.push(require('mojular-govuk-elements').sassPaths);
+var loadPaths = require('mojular/sass-paths')([
+  require('mojular-govuk-elements/package.json')
+]);
 
 gulp.task('sass', function() {
   var result = gulp.src('path/to/your/local/styles/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({ includePaths: [].concat.apply([], importPaths) }).on('error', sass.logError))
+    .pipe(sass({ includePaths: loadPaths }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dest + 'css/'));
 ```
@@ -56,7 +57,7 @@ One option is to copy this module’s assets into your local assets folder via G
 
 ```js
 gulp.task('images', function() {
-  return gulp.src('node_modules/mojular-govuk-elements/assets/images/*')
+  return gulp.src('node_modules/mojular-govuk-elements/images/*')
     .pipe(gulp.dest('assets/images/'));
 });
 ```
@@ -71,7 +72,7 @@ In project settings file:
 project_root = abspath(root('..'))
 STATICFILES_DIRS = (
     root('assets'),
-    abspath(root(project_root, 'node_modules', 'govuk-template', 'assets'))
+    abspath(root(project_root, 'node_modules', 'govuk-template'))
 )
 ```
 
@@ -80,7 +81,7 @@ STATICFILES_DIRS = (
 In `config/initializers/assets.rb`:
 
 ```ruby
-Rails.application.config.assets.paths << Rails.root.join('node_modules', 'mojular-govuk-elements', 'assets', 'images')
+Rails.application.config.assets.paths << Rails.root.join('node_modules', 'mojular-govuk-elements', 'images')
 Rails.application.config.assets.precompile += %w(*.js *.png *.jpg *.ico)
 ```
 
