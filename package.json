@@ -2,7 +2,7 @@
   "name": "mojular-govuk-elements",
   "version": "0.0.11",
   "description": "",
-  "main": "index.js",
+  "main": "./modules",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,7 +23,10 @@
   "dependencies": {
     "bourbon": "^4.2.5",
     "include-media": "^1.4.1",
-    "mojular": "mojular/mojular",
+    "jquery": "^1.11.1",
+    "lodash": "^3.10.1",
+    "merge": "^1.2.0",
+    "mojular": "mojular/mojular#refactor",
     "susy": "^2.2.6"
   },
   "paths": {
@@ -31,7 +34,7 @@
       "node_modules/bourbon/app/assets/stylesheets/",
       "node_modules/include-media/dist",
       "node_modules/susy/sass",
-      "assets/sass"
+      "sass"
     ]
   }
 }
