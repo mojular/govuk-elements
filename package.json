@@ -1,6 +1,6 @@
 {
   "name": "mojular-govuk-elements",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "./modules",
   "private": true,
@@ -26,7 +26,7 @@
     "jquery": "^1.11.1",
     "lodash": "^3.10.1",
     "merge": "^1.2.0",
-    "mojular": "mojular/mojular#0.1.0",
+    "mojular": "mojular/mojular#0.2.0",
     "susy": "^2.2.6"
   },
   "sassPaths": [
