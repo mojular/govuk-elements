@@ -43,7 +43,7 @@ that collects Sass paths defined in its `package.json`.
 In `config/initializers/sass.rb`
 
 ```ruby
-JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['paths']['sass'].each do |p|
+JSON.parse(IO.read("node_modules/mojular-govuk-elements/package.json"))['sassPaths'].each do |p|
   Sass.load_paths << File.expand_path("node_modules/mojular-govuk-elements/#{p}")
 end
 ```
@@ -116,6 +116,6 @@ Or individual modules can be imported:
 $images-dir: '/static/images/';
 ```
 
-See the list of modules in [`assets/sass/govuk`](https://github.com/mojular/govuk-elements/tree/master/sass/govuk).
+See the list of Sass modules in [`sass/govuk`](https://github.com/mojular/govuk-elements/tree/master/sass/govuk).
 
 HTML Examples can be found on [GOV.UK generated styleguide](http://ministryofjustice.github.io/bower-playground/GOV.UK/).
