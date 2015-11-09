@@ -29,12 +29,10 @@
     "mojular": "mojular/mojular#0.1.0",
     "susy": "^2.2.6"
   },
-  "paths": {
-    "sass": [
-      "node_modules/bourbon/app/assets/stylesheets/",
-      "node_modules/include-media/dist",
-      "node_modules/susy/sass",
-      "sass"
-    ]
-  }
+  "sassPaths": [
+    "node_modules/bourbon/app/assets/stylesheets",
+    "node_modules/include-media/dist",
+    "node_modules/mojular-govuk-elements/sass",
+    "node_modules/susy/sass"
+  ]
 }
