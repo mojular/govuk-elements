@@ -7,7 +7,7 @@ This is the implementation of [GOV.UK elements](http://govuk-elements.herokuapp.
 Install via NPM:
 
 ```js
-npm install https://github.com/mojular/govuk-elements/tarball/master --save
+npm install mojular/govuk-elements --save
 ```
 
 To use in your project with Gulp add the following to your `gulpfile.js`:
