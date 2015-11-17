@@ -1,4 +1,7 @@
 @import 'govuk/-essentials';
+@import 'govuk/typography';
+@import 'govuk/layout/base';
+@import 'govuk/utilities';
 
 body {
   background: $grey-3;
