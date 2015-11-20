@@ -17,12 +17,12 @@ a {
     color: $link-colour;
   }
 
-  &:hover {
-    color: $link-hover-colour;
-  }
-
   &:visited {
     color: $link-visited-colour;
+  }
+
+  &:hover {
+    color: $link-hover-colour;
   }
 
   &:active {
