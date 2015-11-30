@@ -8,6 +8,10 @@ $fonts: (
 $container-v-padding: 10px;
 $container-h-padding: 20px;
 
+$gutter-width: 30px;
+$gutter-half: $gutter-width/2;
+$column-width: 80px;
+
 // Set this variable manually when using vanilla Sass
 // Use Asset Pipeline helper otherwise
 // When set this variable should be declared before importing this helper
@@ -21,3 +25,4 @@ $breakpoints: (
   tablet: 640px,
   desktop: 1024px
 );
+
