@@ -1,6 +1,6 @@
 {
   "name": "mojular-govuk-elements",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "",
   "main": "./modules",
   "private": true,
