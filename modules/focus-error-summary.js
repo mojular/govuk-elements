@@ -14,7 +14,8 @@ exports.FocusErrorSummary = {
       $errorSummary.on('click', 'a', function(e) {
         e.preventDefault();
         var href = $(this).attr('href');
-        $(href).focus();
+        var id = href.substr(href.indexOf('#'));
+        $(id).focus();
       });
     }
     // Otherwise, set focus to the field with the error
