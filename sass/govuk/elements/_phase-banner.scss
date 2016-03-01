@@ -1,7 +1,7 @@
 @import 'govuk/-essentials';
 
 .phase-tag {
-  padding: 3px 5px;
+  padding: 2px 5px 0;
   display: inline-block;
   color: $white;
   font-weight: bold;
@@ -12,7 +12,7 @@
     background: $alpha-colour;
 
     + .phase-banner-message {
-      padding-left: 4.5em;
+      padding-left: 4.8em;
     }
   }
 
@@ -28,8 +28,10 @@
 .phase-banner {
   .phase-tag {
     float: left;
+    line-height: 1.25;
     margin-top: -4px;
     margin-bottom: -4px;
+    letter-spacing: 1px;
 
     @media print {
       border: 1mm solid;
