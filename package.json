@@ -23,9 +23,9 @@
   "dependencies": {
     "bourbon": "^4.2.5",
     "include-media": "^1.4.1",
-    "jquery": "^1.11.1",
+    "jquery": "^3.1.1",
     "js-cookie": "^2.0.4",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.4",
     "merge": "^1.2.0",
     "mojular-templates": "mojular/templates",
     "susy": "^2.2.6"
